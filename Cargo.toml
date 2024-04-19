@@ -1,0 +1,48 @@
+[package]
+name = "mine"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+async-trait = "0.1.68"
+
+async_static = "0.1.3"
+
+captcha = "0.0.9"
+clap = { version = "4.3.3", features = ["derive"] }
+heck = "0.4.1"
+jsonwebtoken = "8.3.0"
+lazy_static = "1.4.0"
+log = "0.4.18"
+once_cell = "1.18.0"
+poem = { version = "1.3.55", features = [
+  "static-files",
+  "multipart",
+  "i18n",
+  "csrf",
+  "tempfile",
+  "embed",
+  "session",
+  "anyhow",
+] }
+regex = "1.8.4"
+rust-embed = "6.6.1"
+serde = { version = "1.0.163", features = ["derive"] }
+serde_json = "1.0.96"
+sqlx = { version = "0.6.3", features = [
+  "runtime-tokio-native-tls",
+  "time",
+  "bigdecimal",
+  "json",
+  "macros",
+  "postgres",
+] }
+tera = "1.19.0"
+thiserror = "1.0.40"
+time = { version = "0.3.22", features = ["formatting", "parsing", "serde"] }
+tokio = { version = "1.28.2", features = ["full"] }
+toml_edit = { version = "0.19.10", features = ["serde"] }
+tracing-subscriber = "0.3.17"
+validator = { version = "0.16.0", features = ["derive"] }
